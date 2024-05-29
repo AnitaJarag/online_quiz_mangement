@@ -1,0 +1,126 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust height as needed */
+}
+
+.login-container,
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #666;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 12px 20px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.btn-login {
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+.btn-forgot-password {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-forgot-password:hover {
+  text-decoration: underline;
+}
+
+.image-container {
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+.img-fluid {
+  width: 95%;
+  height:500px;
+  border-radius: 5px;
+}
+
+form {
+  width: 50%;
+  border: 2px solid #f0f0f0; /* Faint color border */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button.quizbtn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button.quizbtn:hover {
+  background-color: #0056b3;
+}

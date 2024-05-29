@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span class="text-warning" style="font-size: 20px; font-weight: bold;">Quiz</span></a>
+    </div>
+    <div [ngSwitch]="menuType">
+      <ul class="nav navbar-nav" *ngSwitchCase="'guest'">
+        <li class="active"><a routerLink="/" style="font-size: 16px; font-weight: bold;">Home</a></li>
+        <li><a routerLink="/aboutus" style="font-size: 16px; font-weight: bold;">About Us </a></li>
+        <li><a routerLink="/study" style="font-size: 16px; font-weight: bold;">Study Material </a></li>
+          <li><a routerLink="/reg" style="font-size: 16px; font-weight: bold;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a routerLink="/log" style="font-size: 16px; font-weight: bold;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a routerLink="/alog" style="font-size: 16px; font-weight: bold;"><span class="glyphicon glyphicon-log-in"></span> AdminLogin</a></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav" *ngSwitchCase="'user'">
+        <li class="active"><a routerLink="/" style="font-size: 16px; font-weight: bold;">Home</a></li>
+        <li><a routerLink="/aboutus" style="font-size: 16px; font-weight: bold;">About Us </a></li>
+        <li><a routerLink="/study" style="font-size: 16px; font-weight: bold;">Study Material </a></li>
+        <li><a routerLink="/quiz" style="font-size: 16px; font-weight: bold;">Quiz</a></li>
+        <li><a routerLink="/feedback" style="font-size: 16px; font-weight: bold;">Feedback</a></li>
+        <li><a (click)="slogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav" *ngSwitchCase="'admin'">
+        <li class="active"><a routerLink="/" style="font-size: 16px; font-weight: bold;">Home</a></li>
+        <li><a routerLink="/aboutus" style="font-size: 16px; font-weight: bold;">About Us </a></li>
+        <li><a routerLink="/study" style="font-size: 16px; font-weight: bold;">Study Material </a></li>
+        <li><a routerLink="/viewfeedback" style="font-size: 16px; font-weight: bold;"> view Feedback</a></li>
+        <li><a routerLink="/viewregister" style="font-size: 16px; font-weight: bold;">view Register</a></li>
+        <li><a routerLink="/addmcq" style="font-size: 16px; font-weight: bold;">AddMcq </a></li>
+        <li><a (click)="alogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

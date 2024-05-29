@@ -1,0 +1,79 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 50%;
+}
+
+.login-container,
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Set flex direction to column */
+}
+
+.login-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #666;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  padding: 12px 20px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.btn-login {
+  border-radius: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+.btn-forgot-password {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-forgot-password:hover {
+  text-decoration: underline;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

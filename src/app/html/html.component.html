@@ -1,0 +1,15 @@
+<div class="container">
+<form (ngSubmit)="submitdata()">
+        <div *ngFor="let q of que; index as i">
+          <input type=hidden value="{{q.queno}}">{{i+1}} {{q.quename}}<br>
+        
+          <input type="radio" value="{{q.opt1}}" name="o{{q.opt1}}" [(ngModel)]="uq[i]" >{{q.opt1}}<br>
+         <input type="radio" value="{{q.opt2}}" name="o{{q.opt2}}" [(ngModel)]="uq[i]" >{{q.opt2}} <br>
+         <input type="radio" value="{{q.opt3}}" name="o{{q.opt3}}" [(ngModel)]="uq[i]" >{{q.opt3}} <br>
+         <input type="radio" value="{{q.opt4}}" name="o{{q.opt4}}" [(ngModel)]="uq[i]" >{{q.opt4}} <br>
+        
+        </div>
+    <input type="submit" class="btn btn-primary">
+  </form>    
+  </div>
+    

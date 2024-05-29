@@ -1,0 +1,33 @@
+<div class="container">
+  <form (ngSubmit)="submitdata(addForm)" #addForm="ngForm">
+    <h1>Register here</h1>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" #name="ngModel" class="form-control" name="name" id="name" required [(ngModel)]="reg.name" required pattern="^[a-zA-Z]+$">
+    <div *ngIf="!name.valid" style="color:red;">name is required</div>
+    <div *ngIf="name.errors?.['pattern']">name can contains only alphabets</div>
+
+<label for="city"><b>City</b></label>
+<input type="text" placeholder="Enter City" #city="ngModel"class="form-control"  name="city" id="city" required [(ngModel)]="reg.city" required pattern="^[a-zA-Z]+$">
+<div *ngIf="!city.valid" style="color:red;">city is required</div>
+<div *ngIf="city.errors?.['pattern']">city can contains only alphabets</div>
+<label for="mobileno"><b>mobile no</b></label>
+<input type="text" placeholder="Enter mobileno" class="form-control"#mobileno="ngModel" name="mobileno" id="mobileno" required [(ngModel)]="reg.mobileno" required pattern="^[0-9]{10,}$">
+<div *ngIf="!mobileno.valid" style="color:red;">mobileno is required</div>
+<div *ngIf="mobileno.errors?.['required']">mobileno can contains only numbers</div>
+<label for="emailid"><b>Email Id</b></label>
+<input type="text" placeholder="Enter Email"class="form-control" #emailid="ngModel" name="emailid" id="emailid" required [(ngModel)]="reg.emailid" required>
+<div *ngIf="!emailid.valid" style="color:red;">emailid is required</div>
+<div *ngIf="emailid.errors?.['email']">emailid must be required one special character,symbol,number,small character
+</div>
+<label for="psw"><b>Password</b></label>
+<input type="password" #password="ngModel" placeholder="Enter Password"class="form-control" name="psw" id="psw" required [(ngModel)]="reg.password" required>
+<div *ngIf="!password.valid" style="color:red;">password is required</div>
+<div *ngIf="password.errors?.['required']">password must contain at least one number and one uppercase and lowercase ,letter and at least 8 or 16 characters</div>
+<p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
+
+<button type="submit" class="registerbtn">Register</button>
+</form>
+<div class="container signin">
+  <p>Already have an account? <a href="#">Sign in</a></p>
+</div>
+</div>

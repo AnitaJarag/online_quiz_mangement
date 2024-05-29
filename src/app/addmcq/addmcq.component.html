@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="image-container">
+    <img src="../assets/fe.jpeg" class="img-fluid" alt="Dog Image">
+  </div>
+  <form (ngSubmit)="submitdata()">
+    <h1>Insert Quiz</h1>
+    <label for="quename"><b>Question</b></label>
+    <input type="text" placeholder="Enter Question" name="quename" id="quename" required [(ngModel)]="add.quename">
+    <label for="lang"><b>Language</b></label>
+    <select name="lang" id="lang" required [(ngModel)]="add.language">
+      <option value="" disabled selected>Select</option>
+      <option value="Html">Html</option>
+      <option value="Css">Css</option>
+      <option value="Java">Java</option>
+      <option value="Dotnet">DotNet</option>
+      <option value="php">Php</option>
+      <option value="python">Python</option>
+    </select>
+    <label for="opt1"><b>Option1</b></label>
+    <input type="text" placeholder="Enter Option1" name="opt1" id="opt1" required [(ngModel)]="add.opt1">
+    <label for="opt2"><b>Option2</b></label>
+    <input type="text" placeholder="Enter Option2" name="opt2" id="opt2" required [(ngModel)]="add.opt2">
+    <label for="opt3"><b>Option3</b></label>
+    <input type="text" placeholder="Enter Option3" name="opt3" id="opt3" required [(ngModel)]="add.opt3" >
+    <label for="opt4"><b>Option4</b></label>
+    <input type="text" placeholder="Enter Option3" name="opt4" id="opt4" required [(ngModel)]="add.opt4" >
+    <label for="ans"><b>Answer</b></label>
+    <input type="text" placeholder="Enter Answer" name="ans" id="ans" required [(ngModel)]="add.ans">
+    <button type="submit" class="quizbtn">Submit</button>
+  </form>
+</div>
